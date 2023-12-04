@@ -1,10 +1,10 @@
 <template>
 	<div>
 		<div class="grid grid-cols-4 gap-5">
-			<div v-for="p in products">
+			<div v-for="p in products" :key="p.id">
 				<ProductCard :product="p" />
 
-				<!-- <NuxtLink :to="`/products/${p.id}` " class="font-bold">{{ p.title }}</NuxtLink> -->
+				<NuxtLink :to="`/products/${p.id}` " class="font-bold">{{ p.title }}</NuxtLink>
 			</div>
 		</div>
 	</div>
